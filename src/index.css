@@ -97,6 +97,7 @@ body {
   height: 40px;
   width: 100%;
   outline: none;
+  background-color: #FFF;
 }
 
 .table .table__button {
@@ -321,7 +322,7 @@ body {
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 600px) {
   .hotels .hotels__actions {
     flex-direction: column;
     gap: 20px;
