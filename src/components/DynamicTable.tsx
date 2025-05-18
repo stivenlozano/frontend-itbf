@@ -28,7 +28,7 @@ function DynamicTable<T extends { id: number | string }>({ data, columns, action
         </thead>
 
         <tbody className="table__table-body">
-          {data.map((row) => (
+          {data?.map((row) => (
             <tr key={row.id} className="table__table-row">
               {columns.map((col) => {
                 const cellValue = row[col.key];
@@ -48,7 +48,7 @@ function DynamicTable<T extends { id: number | string }>({ data, columns, action
             </tr>
           ))}
 
-          {!data.length && (
+          {!data?.length && (
             <tr className="table__table-row">
               <td colSpan={columns.length+1} className="table__table-cell"> No hay resultados </td>
             </tr>
